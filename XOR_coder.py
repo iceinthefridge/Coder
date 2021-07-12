@@ -2,21 +2,7 @@ import random
 code = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ1234567890 !"#$%&’()*+,-./:;<>=?@[ ^_`{}| ~꿈꿉꿊꿋꿌꿍꿎꿏꿐꿑꿒꿓꿔꿕꿖꿗꿘꿙꿚꿛꿜꿝꿞꿟꿠꿡꿢꿣꿤꿥꿦꿧꿨꿩꿪꿫꿬꿭꿮꿯꿰꿱꿲꿳꿴꿵꿶꿷꿸꿹꿺꿻꿼꿽꿾꿿뀀뀁뀂뀃뀄뀅뀆뀇뀈뀉뀊뀋뀌뀍뀎뀏뀐뀑뀒뀓뀔뀕뀖뀗뀘뀙뀚뀛뀜뀝뀞뀟뀠뀡뀢뀣뀤뀥Ԉ'
 
 def xor(i1,i2):
-    o = ''
-        
-    for i in range(len(i1)):
-        if i1[i] == '1' and i2[i] == '1':
-            o += '0'
-                
-        if i1[i] == '1' and i2[i] == '0':
-            o += '1'
-                
-        if i1[i] == '0' and i2[i] == '1':
-            o += '1'
-
-        if i1[i] == '0' and i2[i] == '0':
-            o += '0'
-    return o
+    return ['1' if int(i1[i]) + int(i2[i]) == 1 else '0' for i in range(0, len(i1))]
 
 while True:
     block = '10'
